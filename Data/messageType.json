@@ -1,0 +1,275 @@
+{//戳一戳私聊Json信息
+	'notice_type': 'notify',							//通知类型			string		通知
+	'post_type': 'notice',								//推送类型			string		notice
+	'self_id': 3182043423,								//自身ID			int
+	'sender_id': 2602961063,							//发送者ID			int
+	'sub_type': 'poke',									//消息子类型		string		戳
+	'target_id': 3182043423,							//目标ID			int
+	'time': 1649568593,									//消息时间			unix
+	'user_id': 2602961063								//发送者ID			int
+}
+{//HeartBeat Json信息（From Go-CQHttp）
+	'interval': 5000,									//
+	'meta_event_type': 'heartbeat',
+	'post_type': 'meta_event',
+	'self_id': 3182043423,
+	'status': {
+		'app_enabled': True,
+		'app_good': True,
+		'app_initialized': True,
+		'good': True,
+		'online': True,
+		'plugins_good': None,
+		'stat': {
+			'packet_received': 54,
+			'packet_sent': 46,
+			'packet_lost': 0,
+			'message_received': 0,
+			'message_sent': 0,
+			'disconnect_times': 0,
+			'lost_times': 0,
+			'last_message_time': 0
+			}
+		},
+	'time': 1649569216
+}
+{//文本私聊Json信息
+	'font': 0,											//字体（意义未知）	int
+	'message': [{								//信息Json
+		'data': {								//信息内容Json
+			'text': 'qwq'								//信息文本			string
+		},
+		'type': 'text'									//信息类型			string
+	}],
+	'message_id': -599062314,							//信息ID			int
+	'message_type': 'private',							//信息类型			string		privat,group
+	'post_type': 'message',								//推送类型			string		message
+	'raw_message': 'qwq',								//原始信息			string
+	'self_id': 3182043423,								//自身ID			int
+	'sender': {									//发送者信息
+		'age': 0,										//年龄				int
+		'nickname': '乐正银樱',							//昵称				string
+		'sex': 'unknown',								//性别				string
+		'user_id': 2602961063							//ID				int
+	},
+	'sub_type': 'friend',								//消息子类型		string		好友
+	'target_id': 3182043423,							//接收者ID			int
+	'time': 1649569571,									//消息时间			unix
+	'user_id': 2602961063								//发送者ID			int
+}
+{//图像私聊Json信息
+'font': 0,
+'message': [{
+'data': {
+'file': '9bf30ed1853417ab5830f5893f69545a.image',
+'url': 'https://c2cpicdw.qpic.cn/offpic_new/2602961063//2602961063-2777690250-9BF30ED1853417AB5830F5893F69545A/0?term=3'},
+'type': 'image'}],
+'message_id': 1698307174,
+'message_type': 'private',
+'post_type': 'message',
+'raw_message': '[CQ:image,file=9bf30ed1853417ab5830f5893f69545a.image]',
+'self_id': 3182043423,
+'sender': {'age': 0,
+'nickname': '乐正银樱',
+'sex': 'unknown',
+'user_id': 2602961063},
+'sub_type': 'friend',
+'target_id': 3182043423,
+'time': 1649570015,
+'user_id': 2602961063}
+{//闪照私聊Json信息
+'font': 0,
+'message': [{
+'data': {
+'file': '70e741253e37dad16fb1231e0d44756c.image',
+'type': 'flash',
+'url': ''},//手动指定为'https://gchat.qpic.cn/gchatpic_new/0/0-0-{file大写}/0?term=2'
+'type': 'image'}],
+'message_id': 1305593693,
+'message_type': 'private',
+'post_type': 'message',
+'raw_message': '[CQ:image,file=70e741253e37dad16fb1231e0d44756c.image,type=flash]',
+'self_id': 3182043423,
+'sender': {'age': 0,
+'nickname': '乐正银樱',
+'sex': 'unknown',
+'user_id': 2602961063},
+'sub_type': 'friend',
+'target_id': 3182043423,
+'time': 1649571217,
+'user_id': 2602961063}
+{//小表情私聊Json信息
+'font': 0,
+'message': [{
+'data': {
+'id': '267'},
+'type': 'face'}],
+'message_id': -1959494326,
+'message_type': 'private',
+'post_type': 'message',
+'raw_message': '[CQ:face,id=267]',
+'self_id': 3182043423,
+'sender': {'age': 0,
+'nickname': '乐正银樱',
+'sex': 'unknown',
+'user_id': 2602961063},
+'sub_type': 'friend',
+'target_id': 3182043423,
+'time': 1649570080,
+'user_id': 2602961063}
+{//语音私聊Json信息
+'font': 0,
+'message': [{
+'data': {
+'file': 'A4B932C5BD015EFF9093C73794F3E915.amr',
+'url': 'http://36.248.5.68:80/?ver=2&rkey=3062020101045b30590201010201000204bdaa211f042431387a4f30626a595a4946393873614656616a4e5a36776e5f33564137763342504475350204625272db041f0000000866696c6574797065000000013000000005636f64656300000001310400&voice_codec=1&filetype=0'},
+'type': 'record'}],
+'message_id': 1348582141,
+'message_type': 'private',
+'post_type': 'message',
+'raw_message': '[CQ:record,file=A4B932C5BD015EFF9093C73794F3E915.amr]',
+'self_id': 3182043423,
+'sender': {'age': 0,
+'nickname': '乐正银樱',
+'sex': 'unknown',
+'user_id': 2602961063},
+'sub_type': 'friend',
+'target_id': 3182043423,
+'time': 1649570534,
+'user_id': 2602961063}
+//戳一戳群聊Json信息
+{'group_id': 755940124,
+'notice_type': 'notify',
+'post_type': 'notice',
+'self_id': 3182043423,
+'sender_id': 2602961063,
+'sub_type': 'poke',
+'target_id': 2602961063,
+'time': 1649663283,
+'user_id': 2602961063}
+//文本群聊Json信息
+{'anonymous': None,
+'font': 0,
+'group_id': 755940124,
+'message': [{'data': {'text': '？'},
+'type': 'text'}],
+'message_id': -1520986989,
+'message_seq': 1558,
+'message_type': 'group',
+'post_type': 'message',
+'raw_message': '？',
+'self_id': 3182043423,
+'sender': {'age': 0,
+'area': '',
+'card': '',
+'level': '',
+'nickname': '乐正银樱',
+'role': 'member',
+'sex': 'unknown',
+'title': '',
+'user_id': 2602961063},
+'sub_type': 'normal',
+'time': 1649662696,
+'user_id': 2602961063}
+//图像群聊Json信息
+{'anonymous': None,
+'font': 0,
+'group_id': 755940124,
+'message': [{'data': {'file': '4c53e27877556c5a667bc059ed1b02c3.image',
+'subType': '0',
+'url': 'https://gchat.qpic.cn/gchatpic_new/2602961063/755940124-2210011686-4C53E27877556C5A667BC059ED1B02C3/0?term=2'},
+'type': 'image'}],
+'message_id': -2136912030,
+'message_seq': 1560,
+'message_type': 'group',
+'post_type': 'message',
+'raw_message': '[CQ:image,file=4c53e27877556c5a667bc059ed1b02c3.image,subType=0]',
+'self_id': 3182043423,
+'sender': {'age': 0,
+'area': '',
+'card': '',
+'level': '',
+'nickname': '乐正银樱',
+'role': 'member',
+'sex': 'unknown',
+'title': '',
+'user_id': 2602961063},
+'sub_type': 'normal',
+'time': 1649662794,
+'user_id': 2602961063}
+//闪照群聊Json信息
+{'anonymous': None,
+'font': 0,
+'group_id': 755940124,
+'message': [{'data': {'file': '70e741253e37dad16fb1231e0d44756c.image',
+'subType': '0',
+'type': 'flash',
+'url': ''},
+'type': 'image'}],
+'message_id': 11743129,
+'message_seq': 1573,
+'message_type': 'group',
+'post_type': 'message',
+'raw_message': '[CQ:image,file=70e741253e37dad16fb1231e0d44756c.image,type=flash,subType=0]',
+'self_id': 3182043423,
+'sender': {'age': 0,
+'area': '',
+'card': '',
+'level': '',
+'nickname': '乐正银樱',
+'role': 'member',
+'sex': 'unknown',
+'title': '',
+'user_id': 2602961063},
+'sub_type': 'normal',
+'time': 1649674441,
+'user_id': 2602961063}
+//小表情群聊Json信息
+{'anonymous': None,
+'font': 0,
+'group_id': 755940124,
+'message': [{'data': {'id': '12'},
+'type': 'face'}],
+'message_id': -255083539,
+'message_seq': 1565,
+'message_type': 'group',
+'post_type': 'message',
+'raw_message': '[CQ:face,id=12]',
+'self_id': 3182043423,
+'sender': {'age': 0,
+'area': '',
+'card': '',
+'level': '',
+'nickname': '乐正银樱',
+'role': 'member',
+'sex': 'unknown',
+'title': '',
+'user_id': 2602961063},
+'sub_type': 'normal',
+'time': 1649662926,
+'user_id': 2602961063}
+//语音群聊Json信息
+{'anonymous': None,
+'font': 0,
+'group_id': 755940124,
+'message': [{'data': {'file': '0E5E8CCE-B5DF-F466-0318-0781ADAFE2FC.amr',
+'url': 'http://grouptalk.c2c.qq.com/?ver=0&rkey=3062020101045b30590201010201010204bdaa211f042439387a4f316c42314c4b463938734733754e45505223645a4364303637346f484c61655f02046253dbee041f0000000866696c6574797065000000013100000005636f64656300000001310400&filetype=1&voice_codec=1'},
+'type': 'record'}],
+'message_id': 516283073,
+'message_seq': 1567,
+'message_type': 'group',
+'post_type': 'message',
+'raw_message': '[CQ:record,file=0E5E8CCE-B5DF-F466-0318-0781ADAFE2FC.amr]',
+'self_id': 3182043423,
+'sender': {'age': 0,
+'area': '',
+'card': '',
+'level': '',
+'nickname': '乐正银樱',
+'role': 'member',
+'sex': 'unknown',
+'title': '',
+'user_id': 2602961063},
+'sub_type': 'normal',
+'time': 1649662958,
+'user_id': 2602961063}
