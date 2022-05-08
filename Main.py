@@ -1,7 +1,10 @@
 from flask import Flask, request
-from Data import Function as Fun
+from Function import Function as Fun
+from Function import DebugConsole as DBC
+from Function import GoCQHttpLog as GCQH
 from threading import Thread
 import os
+from importlib import reload
 
 
 app = Flask(__name__)
@@ -9,7 +12,11 @@ app = Flask(__name__)
 @app.route('/', methods=["POST"])
 def PostData():##接收Json，传递给data
     data = request.get_json()
-    Fun.Data(data)
+    if not 'interval' in data:
+        Me = Fun.MessageProcess(data)
+        statu = Me.MessageBypass()
+        if statu == 'reload':
+            reload(Fun)
     return 'OK'
 
 def HTTP_Server():
@@ -17,27 +24,18 @@ def HTTP_Server():
     #保证和我们在配置里填的一致
     app.run(host='127.0.0.1', port=5710) 
 
-def CQhttp():
-    ##外部执行cqhttp
-    os.system('cd ./go-cqhttp && start start.bat')
-    ##内部执行cqhttp
-    #os.system('cd ./go-cqhttp && go-cqhttp.exe faststart')
-
-def DebugConsole():
-    pass
-
-def thread_start():##双线程（其实没必要）
-    Go_CQHttp = Thread(target=CQhttp)
+def thread_start():##多线程（其实没必要）
+    #Go_CQHttp = Thread(target=GCQH.CQhttp)
     HttpServer = Thread(target=HTTP_Server)
-    Debug_Console = Thread(target=DebugConsole)
+    Debug_Console = Thread(target=DBC.DebugConsole)
 
     #Go_CQHttp.start()
     HttpServer.start()
-    #Debug_Console.start()
+    Debug_Console.start()
 
     #Go_CQHttp.join()
     HttpServer.join()
-    #Debug_Console.join()
+    Debug_Console.join()
 
 if __name__ == '__main__':
     os.system('color 02')
